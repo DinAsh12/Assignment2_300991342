@@ -18,7 +18,10 @@ public class PlayerController : MonoBehaviour
     public float moveForce;
     public float jumpForce;
     public bool isGrounded;
+    public GameObject Trap;
+    public GameObject Arrow;
     public Transform groundTarget;
+    public Vector2 maximumVelocity = new Vector2(20.0f, 30.0f);
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +81,7 @@ public class PlayerController : MonoBehaviour
         // Jump
         if ((Input.GetAxis("Jump") > 0) && (isGrounded))
         {
+            playerBody.gravityScale = 2;
             // Shows the animation state
             heroAnimState = AnimState.JUMP;
             // Makes sure the correct animation is played
@@ -93,12 +97,20 @@ public class PlayerController : MonoBehaviour
             // Makes sure the correct animation is played
             heroAnimator.SetInteger("AnimState", (int)AnimState.ATTACK);
         }
-
+        playerBody.velocity = new Vector2(
+           Mathf.Clamp(playerBody.velocity.x, -maximumVelocity.x, maximumVelocity.x),
+           Mathf.Clamp(playerBody.velocity.y, -maximumVelocity.y, maximumVelocity.y)
+           );
     }
-    // When
-   //void OnTriggerEnter2D(Collider2D Trap)
-   // {
-   //     heroAnimState = AnimState.HURT;
-   //     heroAnimator.SetInteger("AnimState", (int)AnimState.HURT);
-   // }
+    // When player hits traps, gets hit by enem/boss weapons this will play hurt animation
+      void OnTriggeredEnter2D(Collider2D other)
+      {
+        if ((other.gameObject == Trap) || (other.gameObject == Arrow))
+        {
+            heroAnimState = AnimState.HURT;
+            heroAnimator.SetInteger("AnimState", (int)AnimState.HURT);
+            Destroy(this.gameObject);
+        }
+        
+      }
 }

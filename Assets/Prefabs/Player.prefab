@@ -103,7 +103,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -149522719
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4723107735738678597, guid: fc53ce6bd9f5f2e4ebf97eea7e0e0322,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,9 +133,12 @@ MonoBehaviour:
   heroSpriteRenderer: {fileID: 8242709267011768883}
   playerBody: {fileID: 8242709267011768881}
   moveForce: 21
-  jumpForce: 200
+  jumpForce: 300
   isGrounded: 0
+  Trap: {fileID: 0}
+  Arrow: {fileID: 8112548301587699555, guid: 2f07bc6916bfbc644bb1136bd47619ce, type: 3}
   groundTarget: {fileID: 609011506}
+  maximumVelocity: {x: 2, y: 10}
 --- !u!95 &8242709267011768880
 Animator:
   serializedVersion: 3

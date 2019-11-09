@@ -63,11 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Imported Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-    <Compile Include="Assets\Imported Assets\Standard Assets\Editor\Water\Water4\GerstnerDisplaceEditor.cs" />
-    <Compile Include="Assets\Imported Assets\Standard Assets\Editor\Water\Water4\PlanarReflectionEditor.cs" />
-    <Compile Include="Assets\Imported Assets\Standard Assets\Editor\Water\Water4\SpecularLightingEditor.cs" />
-    <Compile Include="Assets\Imported Assets\Standard Assets\Editor\Water\Water4\WaterBaseEditor.cs" />
-    <Compile Include="Assets\Imported Assets\Standard Assets\Editor\Water\Water4\WaterEditorUtility.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/Owner/Desktop/Savior_The Magical World/Savior_Proto_Assignment2_300991342/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -283,9 +278,6 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>D:/2019.2.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>C:/Users/Owner/Desktop/Savior_The Magical World/Savior_Proto_Assignment2_300991342/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.VR">
       <HintPath>D:/2019.2.5f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>

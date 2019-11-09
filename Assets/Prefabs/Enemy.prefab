@@ -134,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -149522719
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4944230376442633554, guid: 9360fdb4bef18094f964fd8e70335fcf,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -187,6 +187,7 @@ MonoBehaviour:
     type: 3}
   ArrowSpawnR: {fileID: 487964901}
   ArrowSpawnL: {fileID: 1657035296}
+  PlayerDetector: {fileID: 0}
   fireRate: 0.5
 --- !u!50 &8039742459194308477
 Rigidbody2D:
